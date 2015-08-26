@@ -1,0 +1,1 @@
+web: iced app.coffee

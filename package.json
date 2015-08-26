@@ -1,0 +1,28 @@
+{
+  "name": "supernco",
+  "version": "0.0.1",
+  "description": "Slackbot for 723ncos.slack.com, with a neo4j backend",
+  "main": "app.coffee",
+  "dependencies": {
+    "handlebars": "^3.0.3",
+    "hapi": "^9.0.3",
+    "iced-coffee-script": "^108.0.7",
+    "inert": "^3.0.1",
+    "neo4j": "^2.0.0-RC2",
+    "vision": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "iced app.coffee"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "webhooks",
+    "neo4j"
+  ],
+  "author": "James Daly",
+  "license": "GNU General Public License v3",
+  "repository": "https://github.com/j-da/supernco"
+}

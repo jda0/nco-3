@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style type="text/css">
+    @font-face {
+      font-family:'League Spartan';
+      src: url('assets/LeagueSpartan-Bold_gdi.eot');
+      src: url('assets/LeagueSpartan-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('assets/LeagueSpartan-Bold_gdi.woff') format('woff'),
+        url('assets/LeagueSpartan-Bold_gdi.ttf') format('truetype'),
+        url('assets/LeagueSpartan-Bold_gdi.svg#LeagueSpartan-Bold') format('svg');
+      font-weight: 700;
+      font-style: normal;
+      font-stretch: normal;
+      unicode-range: U+0020-2265;
+    }
+  
+    body {
+      background: black;
+      font-family: 'League Spartan';
+      font-size: 2.5vh;
+      font-size: 2.5vmax;
+      box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: stretch;
+      -moz-box-pack: stretch;
+      -webkit-justify-content: stretch;
+      -ms-flex-pack: stretch;
+      justify-content: stretch;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch;
+      -webkit-box-align: stretch;
+      -moz-box-align: stretch;
+      -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+    }
+
+    div {
+      box-sizing: border-box;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+      padding: 1em;
+    }
+
+    h2, h3 {
+      line-height: 1em;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 3em;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  {{#if error}}
+    <div style="background-color: #e51c23;">
+      <h2>UH OH</h2>
+      <h3>ERROR</h3>
+    </div>
+  {{else}}
+    {{#each groups}}
+    <div style="background-color: {{color}};">
+      <h2>{{group}}</h2>
+      <h3>{{score}}</h3>
+    </div>
+    {{/each}}
+  {{/if}}
+</body>
+</html>
